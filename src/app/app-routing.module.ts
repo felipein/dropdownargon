@@ -11,12 +11,11 @@ import { AutorizacaoService } from "./servicos/oauth/autorizacao.service";
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "paginas",
+    redirectTo: "aplicacao",
     pathMatch: "full"
   },
   {
     path: "aplicacao",
-    canActivate:[AutorizacaoService],
     loadChildren: () => import('./aplicacao/aplicacao.module').then(m => m.AplicacaoModule)
   },
   {
@@ -93,7 +92,7 @@ const routes: Routes = [
   },
   {
     path: "**",
-    redirectTo: "paginas"
+    redirectTo: "aplicacao"
   }
 ];
 
