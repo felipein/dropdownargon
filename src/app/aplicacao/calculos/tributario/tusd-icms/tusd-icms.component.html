@@ -1,0 +1,905 @@
+<div class=" header bg-danger pb-6">
+  <div class=" container-fluid">
+    <div class=" header-body">
+      <div class=" row align-items-center py-4">
+        <div class=" col-lg-6 col-7">
+          <h6 class=" h2 text-white d-inline-block mb-0">Form elements</h6>
+
+          <nav
+            aria-label="breadcrumb"
+            class=" d-none d-md-inline-block ml-md-4"
+          >
+            <ol class=" breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class=" breadcrumb-item">
+                <a href="javascript:void(0)"> <i class=" fas fa-home"> </i> </a>
+              </li>
+
+              <li class=" breadcrumb-item">
+                <a href="javascript:void(0)"> Forms </a>
+              </li>
+
+              <li aria-current="page" class=" breadcrumb-item active">
+                Form elements
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class=" col-lg-6 col-5 text-right">
+          <a class=" btn btn-sm btn-neutral" href="javascript:void(0)"> New </a>
+
+          <a class=" btn btn-sm btn-neutral" href="javascript:void(0)">
+            Filters
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" container-fluid mt--6">
+  <div class=" row">
+    <div class=" col-lg-6">
+      <div class=" card-wrapper">
+        <div class=" card">
+          <div class=" card-header"><h3 class=" mb-0">Input groups</h3></div>
+
+          <div class=" card-body">
+            <form>
+              <div class=" row">
+                <div class=" col-md-6">
+                  <div
+                    class=" form-group"
+                    [ngClass]="{ focused: focus === true }"
+                  >
+                    <div class=" input-group input-group-merge">
+                      <div class=" input-group-prepend">
+                        <span class=" input-group-text">
+                          <i class=" fas fa-user"> </i>
+                        </span>
+                      </div>
+
+                      <input
+                        class=" form-control"
+                        placeholder="Your name"
+                        type="text"
+                        (focus)="focus = true"
+                        (blur)="focus = false"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class=" col-md-6">
+                  <div
+                    class=" form-group"
+                    [ngClass]="{ focused: focus1 === true }"
+                  >
+                    <div class=" input-group input-group-merge">
+                      <div class=" input-group-prepend">
+                        <span class=" input-group-text">
+                          <i class=" fas fa-envelope"> </i>
+                        </span>
+                      </div>
+
+                      <input
+                        class=" form-control"
+                        placeholder="Email address"
+                        type="email"
+                        (focus)="focus1 = true"
+                        (blur)="focus1 = false"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class=" row">
+                <div class=" col-md-6">
+                  <div
+                    class=" form-group"
+                    [ngClass]="{ focused: focus2 === true }"
+                  >
+                    <div class=" input-group input-group-merge">
+                      <input
+                        class=" form-control"
+                        placeholder="Location"
+                        type="text"
+                        (focus)="focus2 = true"
+                        (blur)="focus2 = false"
+                      />
+
+                      <div class=" input-group-append">
+                        <span class=" input-group-text">
+                          <i class=" fas fa-map-marker"> </i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class=" col-md-6">
+                  <div
+                    class=" form-group"
+                    [ngClass]="{ focused: focus3 === true }"
+                  >
+                    <div class=" input-group input-group-merge">
+                      <input
+                        class=" form-control"
+                        placeholder="Password"
+                        type="password"
+                        (focus)="focus3 = true"
+                        (blur)="focus3 = false"
+                      />
+
+                      <div class=" input-group-append">
+                        <span class=" input-group-text">
+                          <i class=" fas fa-eye"> </i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class=" row">
+                <div class=" col-md-6">
+                  <div
+                    class=" form-group"
+                    [ngClass]="{ focused: focus4 === true }"
+                  >
+                    <div class=" input-group input-group-merge">
+                      <div class=" input-group-prepend">
+                        <span class=" input-group-text">
+                          <i class=" fas fa-credit-card"> </i>
+                        </span>
+                      </div>
+
+                      <input
+                        class=" form-control"
+                        placeholder="Payment method"
+                        type="text"
+                        (focus)="focus4 = true"
+                        (blur)="focus4 = false"
+                      />
+
+                      <div class=" input-group-append">
+                        <span class=" input-group-text">
+                          <small class=" font-weight-bold"> USD </small>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class=" col-md-6">
+                  <div
+                    class=" form-group"
+                    [ngClass]="{ focused: focus5 === true }"
+                  >
+                    <div class=" input-group input-group-merge">
+                      <div class=" input-group-prepend">
+                        <span class=" input-group-text">
+                          <i class=" fas fa-globe-americas"> </i>
+                        </span>
+                      </div>
+
+                      <input
+                        class=" form-control"
+                        placeholder="Phone number"
+                        type="text"
+                        (focus)="focus5 = true"
+                        (blur)="focus5 = false"
+                      />
+
+                      <div class=" input-group-append">
+                        <span class=" input-group-text">
+                          <i class=" fas fa-phone"> </i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class=" card">
+          <div class=" card-header"><h3 class=" mb-0">Dropdowns</h3></div>
+
+          <div class=" card-body">
+            <form>
+              <select class=" form-control" data-toggle="select" id="selectr">
+                <option value="alerts"> Alerts </option>
+
+                <option value="badges"> Badges </option>
+
+                <option value="buttons"> Buttons </option>
+
+                <option value="cards"> Cards </option>
+
+                <option value="forms"> Forms </option>
+
+                <option value="modals"> Modals </option>
+                <option value="alerts"> Alerts </option>
+
+                <option value="badges"> Badges </option>
+
+                <option value="buttons"> Buttons </option>
+
+                <option value="cards"> Cards </option>
+
+                <option value="forms"> Forms </option>
+
+                <option value="modals"> Modals </option>
+                <option value="alerts"> Alerts </option>
+
+                <option value="badges"> Badges </option>
+
+                <option value="buttons"> Buttons </option>
+
+                <option value="cards"> Cards </option>
+
+                <option value="forms"> Forms </option>
+
+                <option value="modals"> Modals </option> </select
+              ><br />
+              <select
+                class=" form-control"
+                data-toggle="select"
+                id="selectr-multiple"
+              >
+                <option value="alerts"> Alerts </option>
+
+                <option value="badges"> Badges </option>
+
+                <option value="buttons"> Buttons </option>
+
+                <option value="cards"> Cards </option>
+
+                <option value="forms"> Forms </option>
+
+                <option value="modals"> Modals </option>
+              </select>
+            </form>
+          </div>
+        </div>
+
+        
+
+        <div class=" card">
+          <div class=" card-header"><h3 class=" mb-0">Text editor</h3></div>
+
+          <div class=" card-body">
+            <form><div id="quill" data-toggle="quill"></div></form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class=" col-lg-6">
+      <div class=" card-wrapper">
+        <div class=" card">
+          <div class=" card-header"><h3 class=" mb-0">Tags</h3></div>
+
+          
+        </div>
+
+        <div class=" card">
+          <div class=" card-header"><h3 class=" mb-0">Toggle buttons</h3></div>
+
+          <div class=" card-body">
+            <form>
+              <label class=" custom-toggle mr-1">
+                <input type="checkbox" />
+
+                <span class=" custom-toggle-slider rounded-circle"> </span>
+              </label>
+
+              <label class=" custom-toggle mr-1">
+                <input checked="checked" type="checkbox" />
+
+                <span
+                  class=" custom-toggle-slider rounded-circle"
+                  data-label-off="No"
+                  data-label-on="Yes"
+                >
+                </span>
+              </label>
+
+              <label class=" custom-toggle custom-toggle-default mr-1">
+                <input checked="checked" type="checkbox" />
+
+                <span
+                  class=" custom-toggle-slider rounded-circle"
+                  data-label-off="No"
+                  data-label-on="Yes"
+                >
+                </span>
+              </label>
+
+              <label class=" custom-toggle custom-toggle-danger mr-1">
+                <input checked="checked" type="checkbox" />
+
+                <span
+                  class=" custom-toggle-slider rounded-circle"
+                  data-label-off="No"
+                  data-label-on="Yes"
+                >
+                </span>
+              </label>
+
+              <label class=" custom-toggle custom-toggle-warning mr-1">
+                <input checked="checked" type="checkbox" />
+
+                <span
+                  class=" custom-toggle-slider rounded-circle"
+                  data-label-off="No"
+                  data-label-on="Yes"
+                >
+                </span>
+              </label>
+
+              <label class=" custom-toggle custom-toggle-success mr-1">
+                <input checked="checked" type="checkbox" />
+
+                <span
+                  class=" custom-toggle-slider rounded-circle"
+                  data-label-off="No"
+                  data-label-on="Yes"
+                >
+                </span>
+              </label>
+
+              <label class=" custom-toggle custom-toggle-info mr-1">
+                <input checked="checked" type="checkbox" />
+
+                <span
+                  class=" custom-toggle-slider rounded-circle"
+                  data-label-off="No"
+                  data-label-on="Yes"
+                >
+                </span>
+              </label>
+            </form>
+          </div>
+        </div>
+
+        <div class=" card">
+          <div class=" card-header"><h3 class=" mb-0">Sliders</h3></div>
+
+          <div class=" card-body">
+            <form>
+              <div class=" input-slider-container">
+                <div
+                  class=" input-slider"
+                  data-range-value-max="500"
+                  data-range-value-min="100"
+                  id="input-slider"
+                ></div>
+
+                <div class=" row mt-3">
+                  <div class=" col-6">
+                    <span
+                      class=" range-slider-value"
+                      data-range-value-low="100"
+                      id="input-slider-value"
+                    >
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class=" mt-5">
+                <div
+                  data-range-value-max="500"
+                  data-range-value-min="100"
+                  id="input-slider-range"
+                ></div>
+
+                <div class=" row">
+                  <div class=" col-6">
+                    <span
+                      class=" range-slider-value value-low"
+                      data-range-value-low="200"
+                      id="input-slider-range-value-low"
+                    >
+                    </span>
+                  </div>
+
+                  <div class=" col-6 text-right">
+                    <span
+                      class=" range-slider-value value-high"
+                      data-range-value-high="400"
+                      id="input-slider-range-value-high"
+                    >
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class=" card">
+          <div class=" card-header"><h3 class=" mb-0">Dropzone</h3></div>
+
+          <div class=" card-body">
+            <div class=" dropzone dropzone-single mb-3" id="dropzone-single">
+              <div class=" fallback">
+                <div class=" custom-file">
+                  <input
+                    class=" custom-file-input"
+                    id="projectCoverUploads"
+                    type="file"
+                  />
+
+                  <label class=" custom-file-label" for="projectCoverUploads">
+                    Choose file
+                  </label>
+                </div>
+              </div>
+
+              <div class=" dz-preview dz-preview-single">
+                <div class=" dz-preview-cover">
+                  <img
+                    alt="..."
+                    class=" dz-preview-img"
+                    data-dz-thumbnail=""
+                    src="..."
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class=" dropzone dropzone-multiple" id="dropzone-multiple">
+              <div class=" fallback">
+                <div class=" custom-file">
+                  <input
+                    class=" custom-file-input"
+                    id="customFileUploadMultiple"
+                    multiple="multiple"
+                    type="file"
+                  />
+
+                  <label
+                    class=" custom-file-label"
+                    for="customFileUploadMultiple"
+                  >
+                    Choose file
+                  </label>
+                </div>
+              </div>
+
+              <ul
+                class=" dz-preview dz-preview-multiple list-group list-group-lg list-group-flush"
+              >
+                <li class=" list-group-item px-0">
+                  <div class=" row align-items-center">
+                    <div class=" col-auto">
+                      <div class=" avatar">
+                        <img
+                          alt="..."
+                          class=" avatar-img rounded"
+                          data-dz-thumbnail=""
+                          src="..."
+                        />
+                      </div>
+                    </div>
+
+                    <div class=" col ml--3">
+                      <h4 class=" mb-1" data-dz-name="">...</h4>
+
+                      <p class=" small text-muted mb-0" data-dz-size="">...</p>
+                    </div>
+
+                    <div class=" col-auto">
+                      <button
+                        data-dz-remove="true"
+                        class="btn btn-danger btn-sm"
+                      >
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class=" header bg-danger pb-6">
+    <div class=" container-fluid">
+      <div class=" header-body">
+        <div class=" row align-items-center py-4">
+          <div class=" col-lg-6 col-7">
+            <h6 class=" h2 text-white d-inline-block mb-0">ICMS Sobre TUSD/TUST</h6>
+  
+            <nav
+              aria-label="breadcrumb"
+              class=" d-none d-md-inline-block ml-md-4"
+            >
+              <ol class=" breadcrumb breadcrumb-links breadcrumb-dark">
+                <li class=" breadcrumb-item">
+                  <a href="javascript:void(0)"> <i class=" fas fa-home"> </i> </a>
+                </li>
+  
+                <li class=" breadcrumb-item">
+                  <a href="javascript:void(0)"> Cálculos </a>
+                </li>
+  
+                <li aria-current="page" class=" breadcrumb-item active">
+                    ICMS Sobre TUSD/TUST
+                </li>
+              </ol>
+            </nav>
+          </div>
+  
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class=" container-fluid mt--6">
+    <div class=" row">
+      <div class=" col-lg-12">
+
+        <div class=" card">
+          <div class=" card-header"><h3 class=" mb-0">Dropdowns</h3></div>
+
+          <div class=" card-body">
+            <form>
+              <select class=" form-control" data-toggle="select" id="selectr">
+                <option value="alerts"> Alerts </option>
+
+                <option value="badges"> Badges </option>
+
+                <option value="buttons"> Buttons </option>
+
+                <option value="cards"> Cards </option>
+
+                <option value="forms"> Forms </option>
+
+                <option value="modals"> Modals </option>
+                <option value="alerts"> Alerts </option>
+
+                <option value="badges"> Badges </option>
+
+                <option value="buttons"> Buttons </option>
+
+                <option value="cards"> Cards </option>
+
+                <option value="forms"> Forms </option>
+
+                <option value="modals"> Modals </option>
+                <option value="alerts"> Alerts </option>
+
+                <option value="badges"> Badges </option>
+
+                <option value="buttons"> Buttons </option>
+
+                <option value="cards"> Cards </option>
+
+                <option value="forms"> Forms </option>
+
+                <option value="modals"> Modals </option> </select
+              ><br />
+              <select
+                class=" form-control"
+                data-toggle="select"
+                id="selectr-multiple"
+              >
+                <option value="alerts"> Alerts </option>
+
+                <option value="badges"> Badges </option>
+
+                <option value="buttons"> Buttons </option>
+
+                <option value="cards"> Cards </option>
+
+                <option value="forms"> Forms </option>
+
+                <option value="modals"> Modals </option>
+              </select>
+            </form>
+          </div>
+        </div>
+
+        <div class=" card">
+          <div class=" card-header bg-transparent">
+            <h3 class=" mb-0">Novo Cálculo</h3>
+          </div>
+  
+          <div class=" card-body">
+            <div
+              class=" timeline timeline-one-side"
+              data-timeline-axis-style="dashed"
+              data-timeline-content="axis"
+              style="width: 100%;"
+            >
+            <div *ngIf="aguardeVisivel" class=" timeline-block">
+              <span class=" timeline-step badge-success">
+                <i class="fas fa-clock"> </i>
+              </span>
+
+              <div class=" timeline-content">
+                <small class=" text-muted font-weight-bold"> Aguarde... </small>
+  
+                
+              </div>
+            </div>
+
+
+            <div *ngIf="passo1Visivel" class=" timeline-block">
+              <span class=" timeline-step badge-success">
+                <i class=" ni ni-folder-17"> </i>
+              </span>
+
+              <div class=" timeline-content">
+                <small class=" text-muted font-weight-bold"> Passo 1 </small>
+
+                <h5 class=" mt-3 mb-0">Distribuidora Local</h5>
+
+                <p class=" text-sm mt-1 mb-0">
+                  Selecione a distribuidora ou concessionária local para a importação de faturas de energia.
+                </p>
+
+                <div class=" card-body">
+
+
+                  <select class="form-control" data-toggle="select" title="Simple select" data-live-search="true" data-live-search-placeholder="Search ..." id="selectr1">
+                    <option>Alerts</option>
+                    <option>Badges</option>
+                    <option>Buttons</option>
+                    <option>Cards</option>
+                    <option>Forms</option>
+                    <option>Modals</option>
+                  </select>
+
+                  
+                  
+                </div>
+
+                <div class=" mt-3">
+                 
+
+                </div>
+              </div>
+            </div>
+              <div *ngIf="passo1Visivel" class=" timeline-block">
+                <span class=" timeline-step badge-success">
+                  <i class=" ni ni-folder-17"> </i>
+                </span>
+  
+                <div class=" timeline-content">
+                  <small class=" text-muted font-weight-bold"> Passo 1 </small>
+  
+                  <h5 class=" mt-3 mb-0">Importação de faturas</h5>
+  
+                  <p class=" text-sm mt-1 mb-0">
+                    Selecione  os arquivos de fatura em PDF para importação do sistema.
+                  </p>
+
+                  <div class=" card-body">
+                    <input
+                    style="display: none"
+                    type="file"
+                    #fileInput
+                    multiple="multiple"
+                    (change)="selecionarArquivo($event)"
+                    />
+                    <button type="button" (click)="showFileDialog()" class="btn btn-primary" id="btn_selecionarArquivos">
+                        Selecionar arquivos
+                    </button>
+                    <button type="button" (click)="portalEquatorial()" class="btn btn-primary" id="btn_selecionarArquivos">
+                        Portal da distribuidora
+                    </button>
+                    
+                  </div>
+  
+                  <div class=" mt-3">
+                   
+
+                  </div>
+                </div>
+              </div>
+  
+              <div *ngIf="passo2Visivel" class=" timeline-block">
+                <span class=" timeline-step badge-info">
+                  <i class=" ni ni-single-copy-04"> </i>
+                </span>
+  
+                <div class=" timeline-content">
+                  <small class=" text-muted font-weight-bold"> Passo 2 </small>
+                  <div class=" col-lg-12 col-5 text-right">
+                    <button class=" btn btn-sm btn-primary" href="javascript:void(0)" (click)="gerarRelatorio()"> Tudo ok! Gerar relatório</button>
+                  </div>
+  
+                  <h5 class=" mt-3 mb-0">Faturas Importadas</h5>
+  
+                  <p class=" text-sm mt-1 mb-0">
+                    Algumas informações podem não ter sido lidas. Aqui você pode verificar as faturas que foram importadas e corrigir caso sinta falta de algum campo
+                  </p>
+                  
+                  <div>
+                    <div class="dataTables_wrapper py-4">
+                      <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                          
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                          
+                        </div>
+                      </div>
+            
+                      <ngx-datatable
+                        class="bootstrap selection-cell"
+                        [columnMode]="'force'"
+                        [headerHeight]="50"
+                        [footerHeight]="50"
+                        [rowHeight]="'auto'"
+                        [limit]="entries != -1 ? entries : undefined"
+                        [rows]="temp"
+                        (activate)="onActivate($event)"
+                      >
+                        <ngx-datatable-column name="dataEmissao"></ngx-datatable-column>
+                        <ngx-datatable-column name="contaReferenteMes"></ngx-datatable-column>
+                        <ngx-datatable-column name="totalPagar"></ngx-datatable-column>
+                      </ngx-datatable>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div *ngIf="passo3Visivel" class=" timeline-block  ">
+                <span class=" timeline-step badge-info">
+                  <i class=" ni ni-single-copy-04"> </i>
+                </span>
+  
+                <div class=" timeline-content" style="max-width: 1000px;">
+                  <small class=" text-muted font-weight-bold"> Concluído </small>
+  
+                  <h5 class=" mt-3 mb-0">Relatório</h5>
+  
+                  <div>
+                    <p class=" text-sm mt-1 mb-0">
+                      Pronto. Seu relatório já está disponível para visualização e download.
+                    </p>
+                  </div>
+                  
+                  <div class=" col-lg-12 col-5 text-right">
+                    <button class=" btn btn-sm btn-primary" href="javascript:void(0)" (click)="gerarPDF()"> Baixar relatório</button>
+                  </div>
+
+
+                  <div *ngIf="relatorioVisivel" id="quadrorelatorio">
+                    <div class="" >
+                      <div class=" card-body pt-0">
+                      
+
+                        <div class=" text-center">
+                          
+                          <div>
+                            <i class=" ni education_hat mr-2"> </i> Relatório de Remoção da Tarifa de TUSD da Formação da Base de Cálculo para cobrança do ICMS
+                          </div>
+                          <h5 class=" h3">
+                            Cliente {{relatorio.cliente}}
+                          </h5>
+  
+                          <div class=" h5 font-weight-300">
+                            Período de {{relatorio.inicioPeriodo | date: 'MM/yyyy'}} a {{ relatorio.fimPeriodo | date: 'MM/yyyy'}}
+                          </div>
+  
+                         
+                        </div>
+                      </div>
+                      <div class=" row">
+                        <div class=" col">
+                          <div class=" card-profile-stats d-flex justify-content-center">
+                            <div>
+                              <span class=" heading">{{relatorio.resultado | currency}} </span>
+  
+                              <span class=""> Resultado </span>
+                            </div>
+  
+                            <div>
+                              <span class=" heading"> {{ relatorio.totalFaturas }}</span>
+  
+                              <span> Faturas </span>
+                            </div>
+  
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+  
+                    <div>
+                      <div class="dataTables_wrapper py-4">
+                        <div class="row">
+                          <div class="col-sm-12 col-md-6">
+                            
+                          </div>
+                          <div class="col-sm-12 col-md-6">
+                            
+                          </div>
+                        </div>
+              
+                        <div class=" table-responsive">
+                          <table class="table tablesm align-items-center table-flush">
+                            <thead class=" ">
+                              <tr>
+                                <th >Competência</th>
+                
+                                <th  >Base ICMS (R$)</th>
+                
+                                <th  >Base s/ TUSD (R$)</th>
+                
+                                <th  >ICMS (%)</th>
+  
+                                <th  >TUSD (R$)</th>
+                
+                                <th  >ICMS Indevido (R$)</th>
+                
+                                <th  >IPCA (%)</th>
+  
+                                <th >Correção ICMS (R$)</th>
+                
+                
+                                <th scope="col"></th>
+                              </tr>
+                            </thead>
+                
+                            <tbody class=" list">
+                              <tr *ngFor="let remocao of relatorio.remocoes">
+                                <td >{{remocao.competencia | date: 'MM/yyyy'}}</td>
+                
+                                <td>{{remocao.baseCalculoICMS | currency}}</td>
+  
+                                <td>{{remocao.baseCalculoICMSSemTUSDTUST | currency}}</td>
+  
+                                <td>{{remocao.aliquotaICMS | number: '1.2'}} %</td>
+  
+                                <td>{{remocao.valorTUSD | currency}}</td>
+  
+                                <td>{{remocao.icmsCobrancaIndevida | currency}}</td>
+  
+                                <td>{{remocao.indiceCorrecaoMonetariaAcumulado | number: '1.2'}} %</td>
+  
+                                <td>{{remocao.icmsCobrancaIndevidaCorrigida | currency}}</td>
+                
+                              </tr>
+                
+                              
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                    
+                  
+                  
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class=" col-lg-6">
+       
+      </div>
+    </div>
+  </div>
+  

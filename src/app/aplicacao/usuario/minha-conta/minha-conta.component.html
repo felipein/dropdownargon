@@ -1,0 +1,553 @@
+<div
+  class=" header pb-6 d-flex align-items-center"
+  style="min-height: 250px; "
+>
+  <span class=" mask bg-gradient-danger opacity-8"> </span>
+
+  <div class=" container-fluid d-flex align-items-center">
+    <div class=" row">
+      <div class=" col-lg-7 col-md-10">
+        <h1 class=" display-2 text-white">Olá {{usuario.email}}</h1>
+
+        <p class=" text-white mt-0 mb-5">
+          Esta é a página da sua conta no calculei.app! Aqui você pode atualizar suas informações de cadastro e gerenciar o seu plano.
+        </p>
+
+        <!-- <a class=" btn btn-neutral" href="javascript:void(0)"> Editar minha conta </a> -->
+        <!-- <a class=" btn btn-neutral" href="javascript:void(0)"> Editar forma de pagamento </a> -->
+        
+
+
+
+        <div class=" col-md-4">
+            
+            <ng-template #modalForm>
+              <div class="modal-body">
+                <div class=" card-header bg-transparent pb-5">
+                  <div class=" text-muted text-center mt-2 mb-3">
+                    <span> Dados do novo cartão </span>
+                  </div>
+
+                  <div class=" btn-wrapper text-center">
+                    
+                  </div>
+                </div>
+                <div class=" row">
+                  <div class=" col-lg-12">
+              
+                    <div class=" card bg-gradient-primary">
+                      <div class=" card-body">
+                        <div class=" row justify-content-between align-items-center">
+                          
+                        </div>
+              
+                        <div class=" mt-4">
+                          <form class=" form-primary" role="form">
+                            <div class=" form-group">
+                              <div class=" input-group input-group-alternative mb-3">
+                                <div class=" input-group-prepend">
+                                  <span class=" input-group-text">
+                                    <i class=" ni ni-single-02"> </i>
+                                  </span>
+                                </div>
+              
+                                <input
+                                  class=" form-control"
+                                  placeholder="Nome do titular"
+                                  type="text"
+                                />
+                              </div>
+                            </div>
+              
+                            <div class=" form-group">
+                              <div class=" input-group input-group-alternative mb-3">
+                                <div class=" input-group-prepend">
+                                  <span class=" input-group-text">
+                                    <i class=" ni ni-credit-card"> </i>
+                                  </span>
+                                </div>
+              
+                                <input
+                                  class=" form-control"
+                                  placeholder="Número do cartão"
+                                  type="text"
+                                />
+                              </div>
+                            </div>
+              
+                            <div class=" row">
+                              <div class=" col-6">
+                                <div class=" form-group">
+                                  <div class=" input-group input-group-alternative mb-3">
+                                    <div class=" input-group-prepend">
+                                      <span class=" input-group-text">
+                                        <i class=" ni ni-calendar-grid-58"> </i>
+                                      </span>
+                                    </div>
+              
+                                    <input
+                                      class=" form-control"
+                                      placeholder="MM/AA"
+                                      type="text"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+              
+                              <div class=" col-6">
+                                <div class=" form-group">
+                                  <div class=" input-group input-group-alternative">
+                                    <div class=" input-group-prepend">
+                                      <span class=" input-group-text">
+                                        <i class=" ni ni-lock-circle-open"> </i>
+                                      </span>
+                                    </div>
+              
+                                    <input
+                                      class=" form-control"
+                                      placeholder="CCV"
+                                      type="text"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+              
+                            <button class=" btn btn-block btn-success" (click)="salvarNovoCartao()" type="button">
+                              Salvar novo cartão
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class=" modal-body p-0">
+                <div class=" card bg-secondary border-0 mb-0">
+                  <div class=" card-header bg-transparent pb-5">
+                    <div class=" text-muted text-center mt-2 mb-3">
+                      <small> Editar forma de pagamento </small>
+                    </div>
+
+                    <div class=" btn-wrapper text-center">
+                      
+                    </div>
+                  </div>
+
+                  <div class=" card-body px-lg-5 py-lg-5">
+                    <div class=" text-center text-muted mb-4">
+                      <small> Dados do cartão de crédito </small>
+                    </div>
+
+                    
+
+                    <form role="form">
+                      <div
+                        class="form-group mb-3"
+                        [ngClass]="{ focused: focus === true }"
+                      >
+                        <div class="input-group input-group-alternative">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"
+                              ><i class="ni ni-credit-card"></i
+                            ></span>
+                          </div>
+                          <input
+                            class="form-control"
+                            placeholder="Número do cartão de crédito"
+                            type="text"
+                            (focus)="focus = true"
+                            (blur)="focus = false"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="row">
+
+                      <div
+                      class="form-group col-lg-7 col-md-7"
+                      [ngClass]="{ focused: focus === true }"
+                    >
+                      <div class="input-group input-group-alternative">
+                        
+                        <input
+                          class="form-control"
+                          placeholder="Validade"
+                          type="text"
+                          (focus)="focus = true"
+                          (blur)="focus = false"
+                        />
+                      </div>
+                    </div>
+
+
+                    <div
+                      class="form-group col-lg-5 col-md-5"
+                      [ngClass]="{ focused: focus === true }"
+                    >
+                      <div class="input-group input-group-alternative">
+                        
+                        <input
+                          class="form-control"
+                          placeholder="CSV"
+                          type="text"
+                          (focus)="focus = true"
+                          (blur)="focus = false"
+                        />
+                      </div>
+                    </div>
+
+                      </div>
+
+                      <div
+                        class="form-group mb-3"
+                        [ngClass]="{ focused: focus === true }"
+                      >
+                        <div class="input-group input-group-alternative">
+                            <div class="input-group-prepend">
+                              
+                            </div>
+                            <input
+                              class="form-control"
+                              placeholder="Nome do titular do cartão"
+                              type="text"
+                              (focus)="focus = true"
+                              (blur)="focus = false"
+                            />
+                          </div>
+                      </div>
+                      
+                      
+                      <div class="text-center">
+                        <button type="button" class="btn btn-primary my-4">
+                          Salvar
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div> -->
+            </ng-template>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" container-fluid mt--6">
+  <div class=" row">
+    <div class=" col-xl-4 order-xl-1">
+      <div class=" card card-profile">
+        <img
+          alt="Image placeholder"
+          class=" card-img-top"
+          src="assets/img/usuarios/logo-banner-light.png"
+        />
+
+        <div class=" row justify-content-center">
+          <div class=" col-lg-3 order-lg-2">
+            <div class=" card-profile-image">
+              <a href="javascript:void(0)">
+                <img
+                  class=" rounded-circle"
+                  src="assets/img/usuarios/logo-dark_1@4x.png"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class=" card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4"
+        >
+          <div class=" d-flex justify-content-between">
+            <!-- <a class=" btn btn-sm btn-info mr-4" href="javascript:void(0)">
+              Connect
+            </a>
+
+            <a
+              class=" btn btn-sm btn-default float-right"
+              href="javascript:void(0)"
+            >
+              Message
+            </a> -->
+          </div>
+        </div>
+
+        <div class=" card-body pt-0">
+          <div class=" row">
+            <div class=" col">
+              <div class=" card-profile-stats d-flex justify-content-center">
+                <div>
+                  <span class=" heading"> 22 </span>
+
+                  <span class=" description"> Cálculos </span>
+                </div>
+
+                <div>
+                  <span class=" heading"> 10 </span>
+
+                  <span class=" description"> Clientes </span>
+                </div>
+
+                <div>
+                  <span class=" heading"> R$14.000,00</span>
+
+                  <span class=" description"> Resultados </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" text-center">
+            <h5 class=" h3">
+              {{usuario.email}}
+            </h5>
+
+            <div class=" h5 font-weight-300">
+              <i class=" ni location_pin mr-2"> </i> São Luis, MA
+            </div>
+
+            <div class=" h5 mt-4">
+              <i class=" ni business_briefcase-24 mr-2"> </i> SLZ Advogados Associados
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class=" col-xl-8 order-xl-2">
+      <div class=" row">
+        <div class=" col-lg-6">
+          <div class=" card bg-gradient-info border-0">
+            <div class=" card-body">
+              <div class=" row">
+                <div class=" col">
+                  <h5
+                    class=" card-title text-uppercase text-muted mb-0 text-white"
+                  >
+                    Meu Plano
+                  </h5>
+
+                  <span class=" h2 font-weight-bold mb-0 text-white">
+                    +500
+                  </span>
+                </div>
+
+                <div class=" col-auto">
+                  <div
+                    class=" icon icon-shape bg-white text-dark rounded-circle shadow"
+                  >
+                    <i class=" ni ni-active-40"> </i>
+                  </div>
+                </div>
+              </div>
+
+              <p class=" mt-3 mb-0 text-sm">
+                
+
+                <span class=" text-nowrap text-light">500 cálculos por mês</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class=" col-lg-6">
+          <div class=" card bg-gradient-success border-0">
+            <div class=" card-body">
+              <div class=" row">
+                <div class=" col">
+                  <h5
+                    class=" card-title text-uppercase text-muted mb-0 text-white"
+                  >
+                    Saldo
+                  </h5>
+
+                  <span class=" h2 font-weight-bold mb-0 text-white">
+                    49,65%
+                  </span>
+                </div>
+
+                <div class=" col-auto">
+                  <div
+                    class=" icon icon-shape bg-white text-dark rounded-circle shadow"
+                  >
+                    <i class=" ni ni-spaceship"> </i>
+                  </div>
+                </div>
+              </div>
+
+              <p class=" mt-3 mb-0 text-sm">
+                <span class=" text-white mr-2">
+                  <i class=" fa fa-arrow-up"> </i> 3.48%
+                </span>
+
+                <span class=" text-nowrap text-light"> em relação ao mês passado </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class=" card">
+        <div class=" card-header">
+          <div class=" row align-items-center">
+            <div class=" col-8"><h3 class=" mb-0">Minha Conta</h3></div>
+
+            <div class=" col-4 text-right">
+              
+            </div>
+          </div>
+        </div>
+
+        <div class=" card-body">
+
+          
+          <tabset type="pills" class="nav-fill flex-column flex-md-row">
+            <tab>
+              <ng-template tabHeading>
+                <i class="ni ni-cloud-upload-96 mr-2"></i>Faturas
+              </ng-template>
+              <div class="card-body">
+                <div class=" row">
+                  <div class=" col">
+                    <p>Nenhuma fatura.</p>
+                  </div>
+                </div>
+              </div>
+            </tab>
+            <tab>
+              <ng-template tabHeading>
+                <i class="ni ni-bell-55 mr-2"></i>Informações de Pagamento
+              </ng-template>
+
+              <div class="card-body">
+                <div class="row">
+                  <div class=" col-8">
+  
+                    <div class=" card bg-gradient-primary">
+                      <div class=" card-body">
+                        <div class=" row justify-content-between align-items-center">
+                          <div class=" col">
+                            <img
+                              alt="Image placeholder"
+                              src="assets/img/icons/cards/visa.png"
+                            />
+                          </div>
+              
+                          <div class=" col-auto">
+                            <span class=" badge badge-lg badge-success"> Active </span>
+                          </div>
+                        </div>
+              
+                        <div class=" my-4">
+                          <span class=" h6 surtitle text-light"> Card number </span>
+              
+                          <div class=" card-serial-number h1 text-white">
+                            <div>4358</div>
+              
+                            <div>7421</div>
+              
+                            <div>9256</div>
+              
+                            <div>6682</div>
+                          </div>
+                        </div>
+              
+                        <div class=" row">
+                          <div class=" col">
+                            <span class=" h6 surtitle text-light"> Name </span>
+              
+                            <span class=" d-block h3 text-white"> John Snow </span>
+                          </div>
+              
+                          <div class=" col">
+                            <span class=" h6 surtitle text-light"> Expiry date </span>
+              
+                            <span class=" d-block h3 text-white"> 11/23 </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+
+              
+              <div class=" rol">
+                <div class=" col">
+                  <div >
+                    <a class="  btn btn-neutral"  href="javascript:void(0)" data-target="#modal-form" data-toggle="modal" (click)="openFormModal(modalForm)"> Adicionar novo cartão </a>
+  
+                  </div>
+                </div>
+              </div>
+              
+            </tab>
+            <tab>
+              <ng-template tabHeading>
+                <i class="ni ni-calendar-grid-58 mr-2"></i>Minha Assinatura
+              </ng-template>
+             <div class="card-body" *ngIf="!assinante">
+               <p>
+                 Você ainda não tem nenhuma assinatura!
+               </p>
+              <div class=" rol">
+                <div class=" col">
+                  <div >
+                    <a class="  btn btn-neutral"  data-target="#modal-form" data-toggle="modal" [routerLink]="['/aplicacao/usuario/planos']"> Escolher plano e assinar </a>
+  
+                  </div>
+                </div>
+              </div>
+             </div>
+             <div class="card-body" *ngIf="assinante">
+              <p>
+                Minha assinatura:
+              </p>
+             <div class=" rol">
+               <div class=" col">
+                 <div >
+                   <p>
+                     {{this.assinatura.name}}
+                   </p>
+                   <p>
+                    {{this.assinatura.code}}
+                  </p>
+                  <p>
+                    {{this.assinatura.date}}
+                  </p>
+                  <p>
+                    {{this.assinatura.status}}
+                  </p>
+                  <p>
+                    {{this.assinatura.tracker}}
+                  </p>
+
+ 
+                 </div>
+               </div>
+             </div>
+             <div class=" rol">
+              <div class=" col">
+                <div >
+                  <a class="  btn btn-neutral"  data-target="#modal-form" data-toggle="modal" [routerLink]="['/aplicacao/usuario/planos']"> Quero mudar meu plano </a>
+
+                </div>
+              </div>
+            </div>
+            </div>
+            </tab>
+          </tabset>
+        </div>
+      </div>
+
+      
+  </div>
+</div>
+

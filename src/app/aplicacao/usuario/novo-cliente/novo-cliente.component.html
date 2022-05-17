@@ -1,0 +1,190 @@
+<div class=" header bg-danger pb-6">
+    <div class=" container-fluid">
+      <div class=" header-body">
+        <div class=" row align-items-center py-4">
+          <div class=" col-lg-6 col-7">
+            <h6 class=" h2 text-white d-inline-block mb-0">Novo Cliente</h6>
+  
+            
+          </div>
+  
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class=" container-fluid mt--6">
+    <div class=" row">
+      <div class=" col">
+        <div class=" card-wrapper">
+          <div class=" card">
+            <div class=" card-header"><h3 class=" mb-0">Cadastro</h3></div>
+  
+            <div class=" card-body">
+              
+  
+              <form class=" needs-validation" novalidate="" [formGroup]="cadastroForm" (ngSubmit)="salvar()">
+                <div class=" form-row">
+                  <div class=" col-md-4 mb-3">
+                    <label class=" form-control-label" for="validationCustom01">
+                      Nome
+                    </label>
+  
+                    <input
+                      class=" form-control"
+                      id="nome"
+                      placeholder="Nome"
+                      type="text"
+                      formControlName="nome"
+                    />
+  
+                    <div class=" valid-feedback">Looks good!</div>
+                  </div>
+  
+                  <div class=" col-md-4 mb-3">
+                    <label class=" form-control-label" for="validationCustom02">
+                      Sobrenome
+                    </label>
+  
+                    <input
+                      class=" form-control"
+                      id="validationCustom02"
+                      placeholder="Sobrenome"
+                      type="text"
+                      formControlName="sobrenome"
+                    />
+  
+                    <div class=" valid-feedback">Looks good!</div>
+                  </div>
+  
+                  <div class=" col-md-4 mb-3">
+                    <label
+                      class=" form-control-label"
+                      for="validationCustomUsername"
+                    >
+                      Email
+                    </label>
+  
+                    <input
+                      aria-describedby="inputGroupPrepend"
+                      class=" form-control"
+                      id="validationCustomUsername"
+                      placeholder="Email"
+                      type="text"
+                      formControlName="email"
+                    />
+  
+                    <div class=" invalid-feedback">Please choose a username.</div>
+                  </div>
+
+                  <div class=" col-md-4 mb-3">
+                    <label
+                      class=" form-control-label"
+                      for="validationCustomUsername"
+                    >
+                      Telefone
+                    </label>
+  
+                    <input
+                      aria-describedby="inputGroupPrepend"
+                      class=" form-control"
+                      id="validationCustomUsername"
+                      placeholder="Telefone"
+                      type="text"
+                      formControlName="telefone"
+                    />
+  
+                    <div class=" invalid-feedback">Please choose a username.</div>
+                  </div>
+                </div>
+
+                
+  
+                <div class=" form-row">
+                    <div class=" col-md-3 mb-3">
+                        <label class=" form-control-label" for="validationCustom04">
+                            CPF
+                        </label>
+        
+                        <input
+                            class=" form-control"
+                            id="validationCustom04"
+                            placeholder="CPF"
+                            type="text"
+                            formControlName="documentoFiscal"
+                        />
+        
+                        <div class=" invalid-feedback">
+                            Please provide a valid state.
+                        </div>
+                    </div>
+                  <div class=" col-md-4 mb-3">
+                    <label class=" form-control-label" for="validationCustom03">
+                      Endereço
+                    </label>
+  
+                    <input
+                      class=" form-control"
+                      id="validationCustom03"
+                      placeholder="Endereço"
+                      type="text"
+                      formControlName="endereco"
+                    />
+  
+                    <div class=" invalid-feedback">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+  
+                  <div class=" col-md-3 mb-3">
+                    <label class=" form-control-label" for="validationCustom04">
+                      Cidade
+                    </label>
+  
+                    <input
+                      class=" form-control"
+                      id="validationCustom04"
+                      placeholder="Cidade"
+                      type="text"
+                      formControlName="cidade"
+                    />
+  
+                    <div class=" invalid-feedback">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+  
+                  <div class=" col-md-1 mb-1">
+                    <label class=" form-control-label" for="validationCustom05">
+                      UF
+                    </label>
+  
+                    <input
+                      class=" form-control"
+                      id="validationCustom05"
+                      placeholder="UF"
+                      type="text"
+                      formControlName="uf"
+                    />
+  
+                    <div class=" invalid-feedback">
+                      Please provide a valid zip.
+                    </div>
+                  </div>
+                </div>
+  
+                
+  
+                <button [disabled]="!cadastroForm.valid" class=" btn btn-primary" type="submit">
+                  Salvar
+                </button>
+              </form>
+            </div>
+          </div>
+  
+          
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,649 @@
+<nav
+  id="navbar-main"
+  class="navbar navbar-horizontal navbar-main navbar-expand-lg navbar-dark bg-dark"
+>
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="['/paginas/home']">
+      <img src="assets/img/brand/banner-logo-dark.svg" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbar-collapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="navbar-collapse navbar-custom-collapse collapse"
+      id="collapseBasic" [collapse]="isCollapsed"
+    >
+      <div class="navbar-collapse-header">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <a [routerLink]="['/paginas/home']">
+              <img src="assets/img/brand/banner-logo-light.svg" />
+            </a>
+          </div>
+          <div class="col-6 collapse-close">
+            <button
+              type="button"
+              class="navbar-toggler"
+              data-toggle="collapse"
+              data-target="#navbar-collapse"
+              aria-controls="navbar-collapse"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              (click)="isCollapsed = !isCollapsed"
+            >
+              <span></span> <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['/dashboards/dashboard']"
+          >
+            <span class="nav-link-inner--text">Dashboard</span>
+          </a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['/examples/pricing']"
+          >
+            <span class="nav-link-inner--text">Pricing</span>
+          </a>
+        </li> -->
+        <li class="nav-item">
+          <!-- <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['/paginas/login/']"
+          >
+            <span class="nav-link-inner--text">Login</span>
+          </a> -->
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['/paginas/home']"
+            (click)="login()"
+          >
+            <span class="nav-link-inner--text">Login</span>
+          </a>
+        </li>
+        <!-- <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['/examples/register']"
+          >
+            <span class="nav-link-inner--text">Register</span>
+          </a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['/examples/lock']"
+          >
+            <span class="nav-link-inner--text">Lock</span>
+          </a>
+        </li> -->
+      </ul>
+      <hr class="d-lg-none" />
+      <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link nav-link-icon"
+            href="https://www.facebook.com/calculeiapp"
+            target="_blank"
+            tooltip="Siga-nos no Facebook"
+          >
+            <i class="fab fa-facebook-square"></i>
+            <span class="nav-link-inner--text d-lg-none">Facebook</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link nav-link-icon"
+            href="https://www.instagram.com/calculeiapp"
+            target="_blank"
+            tooltip="Siga-nos no Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+            <span class="nav-link-inner--text d-lg-none">Instagram</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link nav-link-icon"
+            href="https://twitter.com/calculei"
+            target="_blank"
+            tooltip="Siga-nos no Twitter"
+          >
+            <i class="fab fa-twitter-square"></i>
+            <span class="nav-link-inner--text d-lg-none">Twitter</span>
+          </a>
+        </li>
+        <!-- <li class="nav-item">
+          <a
+            class="nav-link nav-link-icon"
+            href="https://github.com/creativetimofficial"
+            target="_blank"
+            tooltip="Star us on Github"
+          >
+            <i class="fab fa-github"></i>
+            <span class="nav-link-inner--text d-lg-none">Github</span>
+          </a>
+        </li> -->
+        <!-- <li class="nav-item d-none d-lg-block ml-lg-4">
+          <a
+            href="https://www.creative-tim.com/product/argon-dashboard-pro-angular?ref=adpa-presentation-page"
+            target="_blank"
+            class="btn btn-neutral btn-icon"
+          >
+            <span class="btn-inner--icon">
+              <i class="fas fa-shopping-cart mr-2"></i>
+            </span>
+            <span class="nav-link-inner--text">Purchase now</span>
+          </a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="main-content">
+  <!-- Header -->
+  <div class="header bg-dark pt-5 pb-7">
+    <div class="container">
+      <div class="header-body">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="pr-5">
+              <h1 class="display-2 text-white font-weight-bold mb-0">
+                calculei
+              </h1>
+              <h2 class="display-4 text-white font-weight-light">
+                seus problemas com cálculo juridico resolvidos!
+              </h2>
+              <p class="text-white mt-4">
+                o calculei combina reconhecimento inteligente de texto
+                com uma interface simples para você chegar no resultado com mais rapidez.
+              </p>
+              <p class="text-white mt-4">
+                Funciona assim: você escolhe o tipo de cálculo, importa seus arquivos de sentença, faturas de energia, SPED, INSS,
+                banco, e o calculei lê os dados automáticamente para gerar o relatório com o resultado final.
+              </p>
+              <div class="mt-5">
+                <a
+                  class="btn btn-neutral my-2"
+                  [routerLink]="['/paginas/home']"
+                  (click)="login()"
+                >teste já grátis</a
+                >
+                
+                <!-- <a
+                  href="https://www.creative-tim.com/product/argon-dashboard-pro-angular?ref=adpa-presentation-page"
+                  class="btn btn-default my-2"
+                  >já tenho acesso</a
+                > -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row pt-5">
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <div
+                      class="icon icon-shape bg-gradient-red text-white rounded-circle shadow mb-4"
+                    >
+                      <i class="fas fa-coins"></i>
+                    </div>
+                    <h5 class="h3">Atualização monetária</h5>
+                    <p>Liquidação de sentença</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <div
+                      class="icon icon-shape bg-gradient-info text-white rounded-circle shadow mb-4"
+                    >
+                      <i class="fas fa-blind"></i>
+                    </div>
+                    <h5 class="h3">Previdenciário</h5>
+                    <p>
+                      Tempo de contribuição<br>
+                      Salário de benefício<br>
+                      Revisão<br>
+                    </p>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 pt-lg-5 pt-4">
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <div
+                      class="icon icon-shape bg-gradient-success text-white rounded-circle shadow mb-4"
+                    >
+                      <i class="fas fa-id-badge"></i>
+                    </div>
+                    <h5 class="h3">Trabalhista</h5>
+                    <p>
+                      Rescisão<br>
+                      FGTS<br>
+                      Seguro Desemprego<br>
+                    </p>
+                  </div>
+                </div>
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <div
+                      class="icon icon-shape bg-gradient-warning text-white rounded-circle shadow mb-4"
+                    >
+                      <i class="fas fa-receipt"></i>
+                    </div>
+                    <h5 class="h3">Tributário</h5>
+                    <p>
+                      ICMS sobre TUSD/TUST<br>
+                      ICMS sobre PIS/COFINS<br>
+                      ISS sobre PIS/COFINS<br>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <section class="py-6 pb-9 bg-default">
+    <div class="container-fluid">
+      <div class="row justify-content-center text-center">
+        <div class="col-md-6">
+          <h2 class="display-3 text-white">Mais segurança e resultado para sua advocacia</h2>
+          <p class="lead text-white">
+            Seja independete e cresça! 
+            O medo de fazer errado e de prejudicar o cliente vai embora com o Calculei.
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-lg pt-lg-0 mt--7">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card card-lift--hover shadow border-0">
+                <div class="card-body py-5">
+                  <div
+                    class="icon icon-shape bg-gradient-primary text-white rounded-circle mb-4"
+                  >
+                    <i class="fas fa-magic"></i>
+                  </div>
+                  <h4 class="h3 text-primary text-uppercase">
+                    Inteligência Artificial
+                  </h4>
+                  <p class="description mt-3">
+                    Reconhecimento automático de documentos num passe de mágica. Mais rapidez no resultado sem precisar preencher manualmente os parâmetros do cálculo.
+                  </p>
+                  <div>
+                    <span class="badge badge-pill badge-primary mr-1"
+                      >rapidez</span
+                    >
+                    <span class="badge badge-pill badge-primary mr-1"
+                      >facilidade</span
+                    >
+                    <span class="badge badge-pill badge-primary">tecnologia</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card card-lift--hover shadow border-0">
+                <div class="card-body py-5">
+                  <div
+                    class="icon icon-shape bg-gradient-success text-white rounded-circle mb-4"
+                  >
+                    <i class="fas fa-chalkboard-teacher"></i>
+                  </div>
+                  <h4 class="h3 text-success text-uppercase">
+                    Fácil como 1, 2, 3
+                  </h4>
+                  <p class="description mt-3">
+                    Interface moderna e fácil de entender. Passos simples e auto-explicativos para você chegar rápido no resultado. Você mantém o foco no que realmente importa.
+                  </p>
+                  <div>
+                    <span class="badge badge-pill badge-success mr-1">agilidade</span>
+                    <span class="badge badge-pill badge-success mr-1"
+                      >resultado</span
+                    >
+                    <span class="badge badge-pill badge-success"
+                      >eficiência</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card card-lift--hover shadow border-0">
+                <div class="card-body py-5">
+                  <div
+                    class="icon icon-shape bg-gradient-warning text-white rounded-circle mb-4"
+                  >
+                    <i class="fas fa-award"></i>
+                  </div>
+                  <h4 class="h3 text-warning text-uppercase">
+                    Metodologia Auditada
+                  </h4>
+                  <p class="description mt-3">
+                    Resultados auditáveis e metodologia aberta para garantir maior exatidão e segurança na qualidade do seu trabalho e benefícios para seu cliente.
+                  </p>
+                  <div>
+                    <span class="badge badge-pill badge-warning mr-1"
+                      >certificado</span
+                    >
+                    <span class="badge badge-pill badge-warning mr-1"
+                      >segurança</span
+                    >
+                    <span class="badge badge-pill badge-warning"
+                      >metodologia</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-6">
+    <div class="container">
+      <div class=" row justify-content-center">
+        <div class=" col-lg-10">
+          <div class=" pricing card-group flex-column flex-md-row mb-3">
+            <div class=" card card-pricing border-0 text-center mb-4">
+              <div class=" card-header bg-transparent">
+                <h4 class=" text-uppercase ls-1 text-primary py-3 mb-0">
+                  Novo Advogado
+                </h4>
+              </div>
+  
+              <div class=" card-body px-lg-7">
+                <div class=" display-2">R$ 39/Mês</div>
+  
+                <span class=" text-muted"> por usuário </span>
+  
+                <ul class=" list-unstyled my-4">
+                  <li>
+                    <div class=" d-flex align-items-center">
+                      <div>
+                        <div
+                          class=" icon icon-xs icon-shape bg-gradient-primary shadow rounded-circle text-white"
+                        >
+                          <i class=" fas fa-calculator"> </i>
+                        </div>
+                      </div>
+  
+                      <div>
+                        <span class=" pl-2"> Cálculos ilimitados </span>
+                      </div>
+                    </div>
+                  </li>
+  
+                  <li>
+                    <div class=" d-flex align-items-center">
+                      <div>
+                        <div
+                          class=" icon icon-xs icon-shape bg-gradient-primary shadow rounded-circle text-white"
+                        >
+                          <i class=" fas fa-hdd"> </i>
+                        </div>
+                      </div>
+  
+                      <div>
+                        <span class=" pl-2"> 2GB de armazenamento  </span>
+                      </div>
+                    </div>
+                  </li>
+  
+                  <!-- <li>
+                    <div class=" d-flex align-items-center">
+                      <div>
+                        <div
+                          class=" icon icon-xs icon-shape bg-gradient-primary shadow rounded-circle text-white"
+                        >
+                          <i class=" fas fa-hdd"> </i>
+                        </div>
+                      </div>
+  
+                      <div><span class=" pl-2"> 2GB cloud storage </span></div>
+                    </div>
+                  </li> -->
+                </ul>
+  
+                <button class=" btn btn-primary mb-3"  [routerLink]="['/aplicacao/usuario/novaassinatura']" [queryParams]="{'plano':'Novo Advogado','referencia':'456E3F656060142AA4F17F97692CFCC0'}" type="button">
+                  Assinar com 1 mês grátis
+                </button>
+              </div>
+  
+              <div class=" card-footer">
+                <a class=" text-dark" href="javascript:void(0)">
+                  Fale com nossos consultores
+                </a>
+              </div>
+            </div>
+  
+            <div
+              class=" card card-pricing bg-gradient-success zoom-in shadow-lg rounded border-0 text-center mb-4"
+            >
+              <div class=" card-header bg-transparent">
+                <h4 class=" text-uppercase ls-1 text-white py-3 mb-0">
+                  Alfa
+                </h4>
+              </div>
+  
+              <div class=" card-body px-lg-7">
+                <div class=" display-1 text-white">R$ 49/Mês</div>
+  
+                <span class=" text-white"> por usuário </span>
+  
+                <ul class=" list-unstyled my-4">
+                  <li>
+                    <div class=" d-flex align-items-center">
+                      <div>
+                        <div
+                          class=" icon icon-xs icon-shape bg-white shadow rounded-circle text-muted"
+                        >
+                          <i class=" fas fa-users"> </i>
+                        </div>
+                      </div>
+  
+                      <div>
+                        <span class=" pl-2 text-white">
+                          Clientes ilimitados
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+  
+                  <li>
+                    <div class=" d-flex align-items-center">
+                      <div>
+                        <div
+                          class=" icon icon-xs icon-shape bg-white shadow rounded-circle text-muted"
+                        >
+                          <i class=" fas fa-hdd"> </i>
+                        </div>
+                      </div>
+  
+                      <div>
+                        <span class=" pl-2 text-white">
+                          Armazenamento ilimitado
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+  
+                  <li>
+                    <div class=" d-flex align-items-center">
+                      <div>
+                        <div
+                          class=" icon icon-xs icon-shape bg-white shadow rounded-circle text-muted"
+                        >
+                          <i class=" fas fa-user-md"> </i>
+                        </div>
+                      </div>
+  
+                      <div>
+                        <span class=" pl-2 text-white"> Suporte personalizado </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+  
+                <button class=" btn btn-secondary mb-3"  [routerLink]="['/aplicacao/usuario/novaassinatura']" [queryParams]="{'plano':'Alfa', 'referencia':'9F3D981A65654EDAA4B4BF907AE71CDF'}"  type="button">
+                  Assinar
+                </button>
+              </div>
+  
+              <div class=" card-footer bg-transparent">
+                <a class=" text-dark" href="javascript:void(0)">
+                  Quer assinar para o seu escritório? <br>Fale com nosso pessoal de vendas.
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-6">
+    <div class="container">
+      <div class="row row-grid align-items-center">
+        <div class="col-md-6 order-md-2">
+          <img src="assets/img/theme/app2.png" class="img-fluid" />
+        </div>
+        <div class="col-md-6 order-md-1">
+          <div class="pr-md-5">
+            <h1>Simples assim</h1>
+            <p>
+              Experiência de usuário super agradável com tudo fácil de fazer e fácil de achar.
+            </p>
+            <ul class="list-unstyled mt-5">
+              <li class="py-2">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="badge badge-circle badge-success mr-3">
+                      <i class="fas fa-check"></i>
+                    </div>
+                  </div>
+                  <div><h4 class="mb-0">Relatórios personalizados com a sua marca</h4></div>
+                </div>
+              </li>
+              <li class="py-2">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="badge badge-circle badge-success mr-3">
+                      <i class="fas fa-check"></i>
+                    </div>
+                  </div>
+                  <div><h4 class="mb-0">Melhor custo benefício do mercado</h4></div>
+                </div>
+              </li>
+              <li class="py-2">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="badge badge-circle badge-success mr-3">
+                      <i class="fas fa-check"></i>
+                    </div>
+                  </div>
+                  <div><h4 class="mb-0">Time de suporte humanizado</h4></div>
+                </div>
+              </li>
+              <li class="py-2">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="badge badge-circle badge-success mr-3">
+                      <i class="fas fa-check"></i>
+                    </div>
+                  </div>
+                  <div><h4 class="mb-0">Atualização constante</h4></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+</div>
+
+<!-- Footer -->
+<footer class="py-5" id="footer-main">
+  <div class="container">
+    <div class="row align-items-center justify-content-xl-between">
+      <div class="col-xl-6">
+        <div class="copyright text-center text-xl-left text-muted">
+          &copy; {{ test | date: "yyyy" }}
+          <a
+            href="https://decisao.in"
+            class="font-weight-bold ml-1"
+            target="_blank"
+            >decisao.in ltda.</a
+          >
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <ul
+          class="nav nav-footer justify-content-center justify-content-xl-end"
+        >
+          <li class="nav-item">
+            <a
+              href="javascript::void()"
+              class="nav-link"
+              
+              >Termos de uso</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              href="https://www.creative-tim.com/presentation?ref=adpa-presentation-page"
+              class="nav-link"
+              target="_blank"
+              >LGPD</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              href="http://blog.creative-tim.com?ref=adpa-presentation-page"
+              class="nav-link"
+              target="_blank"
+              >Fale Conosco</a
+            >
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

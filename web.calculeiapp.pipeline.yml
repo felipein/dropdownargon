@@ -1,0 +1,61 @@
+# Node.js with Angular
+# Build a Node.js project that uses Angular.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+
+pool:
+  vmImage: windows-latest
+
+variables:
+  buildConfiguration: 'Release'
+  ngBuildConfiguration: '--prod'
+
+
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '16.x'
+  displayName: 'Install Node.js'
+
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    workingDir: 'web.calculeiapp/'
+    customCommand: 'install -g @angular/cli@latest'
+
+
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    workingDir: 'web.calculeiapp/'
+    customCommand: 'install --force'
+
+- task: AngularCLI@1
+  inputs:
+    command: 'build'
+    project: 'web.calculeiapp/'
+    DisableAnalytics: false
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'web.calculeiapp/dist'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'web.pipeline.build.in.energia'
+    publishLocation: 'Container'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'decisao.in(1)(db607acf-2088-42ed-a692-217bceef398c)'
+    appType: 'webApp'
+    appName: 'calculeiapp'
+    package: '$(Build.ArtifactStagingDirectory)'
+    deploymentMethod: 'auto'
+
